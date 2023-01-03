@@ -179,6 +179,9 @@ parameter in your `localSettings.php` file to point to your proxy.
 * [@jacksga](https://github.com/jacksga)
 * [@Meneth](https://github.com/Meneth)
 
+## Forked by
+* [@fxbeaulieu](https://github.com/fxbeaulieu)
+
 ## License
 
 [MIT License](http://en.wikipedia.org/wiki/MIT_License)

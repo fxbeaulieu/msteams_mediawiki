@@ -23,7 +23,7 @@ class MSTeamsNotifications
     $card = array(
       "@type" => "MessageCard",
       "@context" => "http://schema.org/extensions",
-      "summary" => "Ivy Tech Wiki Update",
+      "summary" => "WikiCA - Changement important à la documentation",
       "title" => $title,
       "sections" => array($activity)
     );
@@ -140,8 +140,8 @@ class MSTeamsNotifications
       $title = "Minor Page Edit";
       $action = "made a minor edit to";
     } else {
-      $title = "Page Edited";
-      $action = "edited";
+      $title = "Un article WikiCA a reçu une modification majeure.";
+      $action = "a écrit cette mise à jour sur la page:";
     }
 
     $details = $article->getTitle();
@@ -172,7 +172,7 @@ class MSTeamsNotifications
     }
 
     // Do not announce newly added file uploads as articles...
-    if ($article->getTitle()->getNsText() == "File") return true;
+    if ($article->getTitle()->getNsText() == "Fichier") return true;
     
     $author = sprintf("[%s](%s)", $user, self::getTeamsUserText($user)["userInfoPage"]);
     $title = "Page Created";

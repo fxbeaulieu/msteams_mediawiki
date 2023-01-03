@@ -1,9 +1,9 @@
 {
-	"name": "Microsoft Teams Notifications",
-	"version": "0.01",
-	"author": "Greg Swallow",
-	"url": "https://github.com/gswallow/MSTeamsNotifications",
-	"description": "Sends Teams notifications for selected actions that have occurred in your MediaWiki sites.",
+	"name": "OpenFlow : Teams pour WikiCA",
+	"version": "0.4",
+	"author": "F-X Beaulieu",
+	"url": "https://dev.azure.com/OS4HD-DEV/_git/Collaboration%20Azure?path=%2FInfrastructure%20Linux%2FWIKI01%2FExtensions%20Mediawiki%2FMSTeamsNofitications-ForkOS4",
+	"description": "Publications Teams automatiques par Webhook pour les annonces de modification majeure au WikiCA. Fork fait à partir de l'extension originale de Greg Swallow (https://github.com/gswallow/msteams_mediawiki)",
 	"type": "other",
 	"AutoloadClasses": {
 		"MSTeamsNotifications": "MSTeamsNotificationsCore.php"
@@ -35,32 +35,32 @@
 			]
 		]
 	},
-	"config": {
-    "TeamsTimeZone": "UTC",
-		"TeamsIncomingWebhookUrl": "",
-		"TeamsFromName": "",
+"config": {
+    "TeamsTimeZone": "US/Eastern",
+		"TeamsIncomingWebhookUrl": "https://os4techno.webhook.office.com/webhookb2/28e1888f-61ad-4b6b-881b-54c706a2eae7@1f7e1762-8fbb-4bee-a9d4-16f6f7889612/IncomingWebhook/16ccdc4974894984bf9f3c457562b174/a0423b20-863a-42ab-8372-54e1545feb5f",
+		"TeamsFromName": "WikiCA",
 		"TeamsSendMethod": "curl",
 		"TeamsIncludePageUrls": true,
-		"TeamsIgnoreMinorEdits": false,
+		"TeamsIgnoreMinorEdits": true,
 		"ExcludedPermission": "",
 		"TeamsExcludeNotificationsFrom": [],
-		"WikiUrl": "",
+		"WikiUrl": "https://o4azr0swiki01.os4techno.com/",
 		"WikiUrlEnding": "index.php?title=",
-		"WikiUrlEndingUserRights": "Special%3AUserRights&user=",
-		"WikiUrlEndingUserPage": "User:",
-		"WikiUrlEndingUserTalkPage": "User_talk:",
-		"WikiUrlEndingUserContributions": "Special:Contributions/",
+		"WikiUrlEndingUserRights": "Spécial%3APermissions&user=",
+		"WikiUrlEndingUserPage": "Utilisateur:",
+		"WikiUrlEndingUserTalkPage": "Discussion_utilisateur:",
+		"WikiUrlEndingUserContributions": "Spécial:Contributions/",
 		"WikiUrlEndingEditArticle": "action=edit",
 		"WikiUrlEndingHistory": "action=history",
 		"WikiUrlEndingDiff": "diff=prev&oldid=",
 		"TeamsNotificationNewUser": true,
 		"TeamsNotificationAddedArticle": true,
-		"TeamsNotificationRemovedArticle": true,
-		"TeamsNotificationMovedArticle": true,
+		"TeamsNotificationRemovedArticle": false,
+		"TeamsNotificationMovedArticle": false,
 		"TeamsNotificationEditedArticle": true,
-		"TeamsShowNewUserEmail": true,
+		"TeamsShowNewUserEmail": false,
 		"TeamsShowNewUserFullName": true,
-		"TeamsShowNewUserIP": true
+		"TeamsShowNewUserIP": false
 	},
 	"manifest_version": 1
 }
